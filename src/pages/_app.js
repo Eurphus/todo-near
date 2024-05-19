@@ -11,8 +11,8 @@ const wallet = new Wallet({ createAccessKeyFor: NearlyContract, networkId: Netwo
 
 export default function MyApp({ Component, pageProps }) {
   const [signedAccountId, setSignedAccountId] = useState('');
-
-  useEffect(() => { wallet.startUp(setSignedAccountId) }, []);
+[]
+  useEffect(() => {wallet.startUp(setSignedAccountId)}, []);
 
   return (
     <NearContext.Provider value={{ wallet, signedAccountId }}>

@@ -3,6 +3,7 @@ import { providers } from 'near-api-js';
 
 // wallet selector
 import { distinctUntilChanged, map } from 'rxjs';
+import { EditContext } from 'react'
 import '@near-wallet-selector/modal-ui/styles.css';
 import { setupModal } from '@near-wallet-selector/modal-ui';
 import { setupWalletSelector } from '@near-wallet-selector/core';
@@ -42,6 +43,9 @@ export class Wallet {
     const isSignedIn = walletSelector.isSignedIn();
     const accountId = isSignedIn ? walletSelector.store.getState().accounts[0].accountId : '';
 
+    console.log("Initial accountId:", accountId);
+    this.theWallet = accountId
+
     walletSelector.store.observable
       .pipe(
         map(state => state.accounts),
@@ -49,9 +53,9 @@ export class Wallet {
       )
       .subscribe(accounts => {
         const signedAccount = accounts.find((account) => account.active)?.accountId;
-        accountChangeHook(signedAccount);
+        accountChangeHook(accountId);
       });
-
+      console.log(accountChangeHook)
     return accountId;
   };
 

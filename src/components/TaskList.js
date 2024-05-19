@@ -16,14 +16,21 @@ export const TaskList = () => {
         console.error('Error fetching tasks:', error);
       }
     }
+    fetchTasks()
 
-    fetchTasks();
+    const intervalId = setInterval(() => fetchTasks, 4000);
+    return () => clearInterval(intervalId);
+
   }, []);
 
   const getTasksFromContract = async () => {
+
     const tasksData = await wallet.viewMethod({
         contractId: NearlyContract,
-        method: 'get_tasks'
+        method: 'get_tasks',
+        args: {
+            user_id: signedAccountId
+        }
       });
       console.log(tasksData)
     return tasksData;
@@ -43,7 +50,7 @@ export const TaskList = () => {
     <div>
     <h1>List of Tasks</h1>
     <div>
-        <table class={style.table}>
+        <table className={style.table}>
         <thead>
             <tr>
             <th>Name</th>
@@ -70,7 +77,7 @@ export const TaskList = () => {
                 </td>
                 </tr>
                 <tr>
-                <td colSpan="5">{task.description}</td>
+                <td colSpan="5">Task Description: {task.description}</td>
                 </tr>
             </React.Fragment>
             ))}
