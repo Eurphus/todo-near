@@ -1,45 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# HawkHacks 2024 Hackathon Submission
+This project was developed by Peter Macdonald, Jemal K, Hamza and Seba at HawkHacks 2024.
 
-## Getting Started
+This repo represents the frontend of the NearlyDone project. See below links for the backend / contract.
 
-First, run the development server:
+# Inspiration
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+When our group started brainstorming for possible project ideas, we decided to discuss problems we faced in our daily lives and possible ways they could be solved. One of our team members talked about how procrastination caused him to delay starting work until right before it was due, or even worse, sometimes after it was late. Our team thought that a solution to this was creating a timed to-do list that would keep track of deadlines, and we added the concept of NEAR costs being donated to both motivate users to complete their tasks on time as well as to help charities doing work they want to support.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+# What it NearlyDone?
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+NearlyDone is a to-do list app built on the NEAR protocol that motivates users by imposing “costs” on them if they don’t complete their tasks on time. Users are able to add, delete, and check off tasks like on a regular to-do list, and are also able to set a deadline, cost amount, and recipient for each task. If a task isn’t completed and checked off by the deadline, then the cost amount will be sent from the user’s NEAR wallet to the recipient’s. Recipients on NearlyDone include a wide range of different charities, allowing users to support causes close to them with money from their incomplete tasks. NearlyDone not only encourages users to complete their day to day tasks, but also promotes DEI principles by providing funding for charities.
+How We Built It
 
-## Learn More about NEAR
+We built NearlyDone on the NEAR protocol primarily using Next.js and React. Prior to starting this project, none of our team members had experience with blockchain development, Next.js, or React, so we dove deep into documentation, tutorials, and other resources provided on NEAR’s developer pages.
 
-To learn more about NEAR, take a look at the following resources:
 
-- [NEAR Documentation](https://docs.near.org) - learn about NEAR.
-- [Frontend Docs](https://docs.near.org/build/web3-apps/quickstart) - learn about this example.
+# Challenges We Ran Into
 
-You can check out [the NEAR repository](https://github.com/near) - your feedback and contributions are welcome!
+Creating our contract was a big hurdle our team faced at the beginning of our project. None of our team members had experience with blockchain development, so we had to read a lot of documentation, experiment with a variety of different frameworks, and go through a lot of trial and error before we were even able to deploy a contract that allowed users to log in to their wallets. Another challenge we faced was creating the front end of our project. Our team had very minimal front end experience, so we had to go through many tutorials and fix a lot of bugs before we were able to get our website up and running.
 
-## Learn More about Next.js
 
-To learn more about Next.js, take a look at the following resources:
+# Accomplishments That We're Proud Of
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We are proud of creating a project that not only compels people to work on achieving their goals, but also creates funding for charities. Another source of pride for our team is the fact that we were able to pick up new technologies and create a working project in under two days, even though our team members had cumulatively attended only two hackathons and had very minimal experience with the tools we used.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+# What We Learned
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Overall, this whole project was a learning experience for our team. We gained a new understanding of blockchain development, as well as front end design and programming. Other than technical experience, we also gained knowledge on a variety of blockchain topics, including contracts, transactions, staking, and security.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Links
+- Website: https://nearlydone.co (Will come offline soon)
+- Repository: https://github.com/Eurphus/nearly-done-contract and https://github.com/Eurphus/nearly-done-front
+- Devpost Equivalent: https://taikai.network/hackbox/hackathons/hawkhacks/projects/clwdecx530diauc01042h0h7k/idea
